@@ -1,1 +1,3 @@
-In this course, you will learn why asynchronous code matters, and how to write code that avoids blocking behavior using three approaches: callbacks, promises, and async/await.
+Let's start by working with callbacks to fetch data. 
+
+Fetching data is one of the most common ways you will write asynchronous programs in JavaScript.
