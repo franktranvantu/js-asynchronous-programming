@@ -1,3 +1,1 @@
-Let's start by working with callbacks to fetch data. 
-
-Fetching data is one of the most common ways you will write asynchronous programs in JavaScript.
+Now that we're successfully getting data asynchronously from the Open Notify API, let's use it to make another AJAX call, this time to the Wikipedia API.

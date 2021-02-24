@@ -4,30 +4,34 @@ const peopleList = document.getElementById('people');
 const btn = document.querySelector('button');
 
 // Make an AJAX request
-function getJSON(url) {
+function getJSON(url, callback) {
   const xhr = new XMLHttpRequest();
   xhr.open('GET', url);
   xhr.onload = () => {
     if(xhr.status === 200) {
       let data = JSON.parse(xhr.responseText);
-      console.log(data);
+      return callback(data);
     }
   };
   xhr.send();
 }
 
 // Generate the markup for each profile
-function generateHTML(data) {
+function generateHTML({thumbnail: {source = 'img/profile.jpg'} = '', title, description, extract}) {
   const section = document.createElement('section');
   peopleList.appendChild(section);
   section.innerHTML = `
-    <img src=${data.thumbnail.source}>
-    <h2>${data.title}</h2>
-    <p>${data.description}</p>
-    <p>${data.extract}</p>
+    <img src=${source}>
+    <h2>${title}</h2>
+    <p>${description}</p>
+    <p>${extract}</p>
   `;
 }
 
 btn.addEventListener('click', () => {
-  getJSON(astrosUrl);
+  getJSON(astrosUrl, (json) => {
+    json.people.map(person => {
+      getJSON(wikiUrl + person.name, generateHTML);
+    });
+  });
 })
