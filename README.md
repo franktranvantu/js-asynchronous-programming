@@ -1,0 +1,1 @@
+In this course, you will learn why asynchronous code matters, and how to write code that avoids blocking behavior using three approaches: callbacks, promises, and async/await.
