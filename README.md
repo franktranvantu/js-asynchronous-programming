@@ -1,1 +1,1 @@
-Learn a new, easier way to make network requests with the Fetch API.
+In this section, you will convert many of the project's promise chains to async/await.
