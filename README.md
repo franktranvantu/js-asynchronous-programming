@@ -1,1 +1,1 @@
-Now that we're successfully getting data asynchronously from the Open Notify API, let's use it to make another AJAX call, this time to the Wikipedia API.
+Each callback adds a level of nesting, and when you have lots of callbacks, the code could get complicated quickly.
