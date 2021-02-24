@@ -32,8 +32,9 @@ function generateHTML(data) {
   data.map(person => {
     const section = document.createElement('section');
     peopleList.appendChild(section);
+    const src = person.thumbnail ? person.thumbnail.source : 'img/profile.jpg';
     section.innerHTML = `
-      <img src=${person.thumbnail.source}>
+      <img src=${src}>
       <h2>${person.title}</h2>
       <p>${person.description}</p>
       <p>${person.extract}</p>
