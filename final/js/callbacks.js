@@ -17,14 +17,14 @@ function getJSON(url) {
 }
 
 // Generate the markup for each profile
-function generateHTML(data) {
+function generateHTML({thumbnail: {source = 'img/profile.jpg'} = '', title, description, extract}) {
   const section = document.createElement('section');
   peopleList.appendChild(section);
   section.innerHTML = `
-    <img src=${data.thumbnail.source}>
-    <h2>${data.title}</h2>
-    <p>${data.description}</p>
-    <p>${data.extract}</p>
+    <img src=${source}>
+    <h2>${title}</h2>
+    <p>${description}</p>
+    <p>${extract}</p>
   `;
 }
 
