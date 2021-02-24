@@ -1,3 +1,5 @@
-JavaScript promises provide an efficient way to fire off and keep track of multiple asynchronous operations with the Promise.all method. 
+The `finally()` method is a new addition to promises. 
 
-Promise.all is useful when your program needs to wait for more than one promise to resolve.
+It gets called once a promise is fully settled, regardless of whether it's fulfilled or rejected. 
+
+Finally is useful when you need to do some clean up after the promise sequence finished.

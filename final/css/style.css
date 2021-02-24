@@ -82,6 +82,10 @@ h2 + p {
   margin: 0 0 1.5em 0;
 }
 
+h3 {
+  text-align: center;
+}
+
 button {
   font-size: 1.15em;
   font-weight: bold;
