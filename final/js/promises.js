@@ -31,22 +31,13 @@ function getProfiles(json) {
 function generateHTML(data) {
   const section = document.createElement('section');
   peopleList.appendChild(section);
-  // Check if request returns a 'standard' page from Wiki
-  if (data.type === 'standard') {
-    section.innerHTML = `
-      <img src=${data.thumbnail.source}>
-      <h2>${data.title}</h2>
-      <p>${data.description}</p>
-      <p>${data.extract}</p>
-    `;
-  } else {
-    section.innerHTML = `
-      <img src="img/profile.jpg" alt="ocean clouds seen from space">
-      <h2>${data.title}</h2>
-      <p>Results unavailable for ${data.title}</p>
-      ${data.extract_html}
-    `;
-  }
+  const src = data.thumbnail ? data.thumbnail.source : 'img/profile.jpg';
+  section.innerHTML = `
+    <img src=${src}>
+    <h2>${data.title}</h2>
+    <p>${data.description}</p>
+    <p>${data.extract}</p>
+  `;
 }
 
 btn.addEventListener('click', (event) => {
