@@ -1,3 +1,3 @@
-If an error occurs, the promise status changes from "pending" to a "rejected" (or failed) state. 
+You've learned how to create and consume a promise, as well as how to chain together a sequence of promises, and handle rejected promises. 
 
-Promises give you the opportunity to handle the error with a method called catch().
+Now you're going to convert parts of the project from callbacks to promises.
