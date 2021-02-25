@@ -1,3 +1,3 @@
-Async/await is not meant to replace promises -- it's actually syntactic sugar for creating functions that return and wait for promises. 
+Since you're working with what looks like synchronous code, async functions can use try...catch to handle any errors. 
 
-In this section, you'll learn how to use a combination of promises and async/await to produce code that's more readable.
+try...catch is the most common way to handle exceptions when using async/await.
